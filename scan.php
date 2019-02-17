@@ -9,7 +9,7 @@ if (is_dir($dir)){
     $i=0;
     while (($file = readdir($dh)) !== false){
       if(!preg_grep('/^([^.])/', scandir($file))){ //Checks for hidden files. Files starting with . (dot)
-        $fileList[$i]["path"] =  "data/"$file;
+        $fileList[$i]["path"] =  "data/".$file;
         if(filemtime($file)){ //filemtime — Gets file modification time
           $fileList[$i]["time"] =  date ("F d Y H:i:s.", filemtime($file));
         }
