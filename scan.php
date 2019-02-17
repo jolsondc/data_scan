@@ -1,6 +1,6 @@
 <?php
 //Directory path here
-$dir = "folder11/";
+$dir = "/home/pi/storage";
 
 // Open a directory, and read its contents
 if (is_dir($dir)){
