@@ -22,7 +22,7 @@ if (is_dir($dir)){
     closedir($dh);
   }
 
-    $jsonObj = json_encode($fileList);
+    $jsonObj = json_encode($fileList,JSON_UNESCAPED_SLASHES);
     echo $jsonObj;
 }
 else{
