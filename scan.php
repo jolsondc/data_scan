@@ -14,7 +14,7 @@ if (is_dir($dir)){
           $fileList[$i]["time"] =  date ("F d Y H:i:s.", filemtime($file));
         }
         else{
-          $fileList[$i]["time"] = null;
+          $fileList[$i]["time"] = "";
         }
         $i++;
       }
