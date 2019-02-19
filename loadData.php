@@ -13,8 +13,7 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
     $finalStr= $data[$c] . "<br />\n";
-    echo $finalStr;
-    $num = count($data);
+    echo $finalStr."yes";
 
   }
   // Close the file
