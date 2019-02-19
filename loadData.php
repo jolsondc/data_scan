@@ -13,6 +13,6 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
     echo trim($finalStr,"<br />\n");
 }
 }else{
-  echo $json_encode("Authentication failed")
+  echo $json_encode("Authentication failed");
 }
 ?>
