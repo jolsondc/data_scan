@@ -14,8 +14,9 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   {		
     // Read the data from a single line
     $finalStr=$data."\n"
+    echo $finalStr
+
   }
-  echo $finalStr
   // Close the file
     fclose($handle);
 }
