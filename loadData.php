@@ -12,8 +12,9 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   // Convert each line into the local $data variable
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
-    echo $data."\n"
-    //echo $finalStr
+    // Read the data from a single line
+    $finalStr=$data."\n";
+      echo $finalStr;
 
   }
   // Close the file
