@@ -1,7 +1,7 @@
 <?php
- $dir= json_decode(stripslashes($dir_name),true);
-echo $dir
-
+if( $_POST["name"] ){
+  echo $_POST['name']
+}
 if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
