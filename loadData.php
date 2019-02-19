@@ -9,7 +9,11 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
             echo $data[$c] . "<br />\n";
         }
     }*/
-    echo $handle
+    while (($row = fgetcsv($handle, 0, ",")) !== FALSE) {
+        //Dump out the row for the sake of clarity.
+        var_dump($row);
+    }
+    echo $row[1];
     fclose($handle);
 }
 ?>
