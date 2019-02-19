@@ -9,11 +9,14 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
             echo $data[$c] . "<br />\n";
         }
     }*/
-    while (($row = fgetcsv($handle, 0, ",")) !== FALSE) {
-        //Dump out the row for the sake of clarity.
-        var_dump($row);
-    }
-    echo $row[1];
+  // Convert each line into the local $data variable
+  while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
+  {		
+    // Read the data from a single line
+    $finalStr=$data."\n"
+  }
+  echo $finalStr
+  // Close the file
     fclose($handle);
 }
 ?>
