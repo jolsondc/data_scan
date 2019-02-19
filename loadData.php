@@ -1,8 +1,6 @@
 <?php
 $data = json_decode(file_get_contents('php://input'), true);
-print_r($data);
-echo $data["name"];
-if( $_REQUEST["name"] && strcmp($_REQUEST["name"],gethostname()) ==0){
+if( $_REQUEST["name"] && strcmp($_REQUEST["name"],gethostname()) ==0|| strcmp($data["name"],gethostname())==0){
 if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
