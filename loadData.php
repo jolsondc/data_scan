@@ -13,6 +13,7 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
     $num = count($data);
+        echo "<p> $num fields in line $row: <br /></p>\n";
 
     // Read the data from a single line
       for ($c=0; $c < $num; $c++) {
