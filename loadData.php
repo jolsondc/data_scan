@@ -13,9 +13,11 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
     // Read the data from a single line
-    $finalStr=$data."\n";
-      echo $finalStr;
+      for ($c=0; $c < $num; $c++) {
+        $finalStr= $data[$c] . "<br />\n";
+        echo $finalStr;
 
+    }
   }
   // Close the file
     fclose($handle);
