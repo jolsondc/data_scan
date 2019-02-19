@@ -1,5 +1,5 @@
 <?php
-if( $_POST["name"] && $_POST["name"]===gethostname()){
+if( $_POST["name"] && strcmp($_POST["name"],gethostname()) ==0){
 
 
 
