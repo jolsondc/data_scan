@@ -1,5 +1,6 @@
 <?php
 $row = 1;
+$finalStr="";
 if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
     /*while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
