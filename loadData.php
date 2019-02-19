@@ -13,9 +13,10 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
     $finalStr = implode(',', $data) . "<br />\n";
-    echo $finalStr."yes";
 
   }
+  echo $finalStr;
+
   // Close the file
     fclose($handle);
 }
