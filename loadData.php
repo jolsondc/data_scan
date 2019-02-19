@@ -17,7 +17,7 @@ if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
 
   }
 
-  echo $finalStr;
+  echo trim($finalStr,"<br/>\n";
 
   // Close the file
     fclose($handle);
