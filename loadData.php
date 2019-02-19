@@ -1,5 +1,5 @@
 <?php
-if( $_POST["name"] && strcmp($_POST["name"],gethostname()) ==0){
+if( $_REQUEST["name"] && strcmp($_REQUEST["name"],gethostname()) ==0){
 if (($handle = fopen("/home/pi/storage/data.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) 
   {		
